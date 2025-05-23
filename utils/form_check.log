@@ -1,0 +1,34 @@
+[2025-05-23 12:48:01] [Info] Successfully loaded URLs from C:\Users\cbemister\Development\WebCrawler\input\leadbox_urls.txt
+[2025-05-23 12:48:01] [Info] Running in test mode - checking only first 5 URLs
+[2025-05-23 12:48:01] [Info] Successfully loaded existing results from C:\Users\cbemister\Development\WebCrawler\output\form_check_results.csv
+[2025-05-23 12:48:01] [Warning] Retry 1/3 for https://premierchevroletbuickgmc.kinsta.cloud/ after error: Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:03] [Warning] Retry 2/3 for https://premierchevroletbuickgmc.kinsta.cloud/ after error: Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:07] [Error] Error processing https://premierchevroletbuickgmc.kinsta.cloud/ : Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:07] [Warning] Retry 1/3 for https://premierchevroletbuickgmc.kinsta.cloud/view/ after error: Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:09] [Warning] Retry 2/3 for https://premierchevroletbuickgmc.kinsta.cloud/view/ after error: Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:13] [Error] Error processing https://premierchevroletbuickgmc.kinsta.cloud/view/ : Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:13] [Warning] Retry 1/3 for https://premierchevroletbuickgmc.kinsta.cloud/sitemap/ after error: Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:15] [Warning] Retry 2/3 for https://premierchevroletbuickgmc.kinsta.cloud/sitemap/ after error: Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:19] [Error] Error processing https://premierchevroletbuickgmc.kinsta.cloud/sitemap/ : Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:19] [Warning] Retry 1/3 for https://premierchevroletbuickgmc.kinsta.cloud/terms-and-conditions/ after error: Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:21] [Warning] Retry 2/3 for https://premierchevroletbuickgmc.kinsta.cloud/terms-and-conditions/ after error: Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:25] [Error] Error processing https://premierchevroletbuickgmc.kinsta.cloud/terms-and-conditions/ : Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:25] [Warning] Retry 1/3 for https://premierchevroletbuickgmc.kinsta.cloud/view-print/ after error: Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:27] [Warning] Retry 2/3 for https://premierchevroletbuickgmc.kinsta.cloud/view-print/ after error: Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:31] [Error] Error processing https://premierchevroletbuickgmc.kinsta.cloud/view-print/ : Keep-Alive and Close may not be set using this property.
+Parameter name: value
+[2025-05-23 12:48:31] [Info] Scan complete! Found 5 unique forms. Results saved to: C:\Users\cbemister\Development\WebCrawler\output\form_check_results.csv
