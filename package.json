@@ -1,0 +1,30 @@
+{
+  "name": "vdp-web-crawler",
+  "version": "1.0.0",
+  "description": "Vehicle Detail Page (VDP) web crawler with advanced anti-bot evasion",
+  "main": "utils/vdp-crawler-playwright.js",
+  "scripts": {
+    "install-browsers": "npx playwright install chromium",
+    "test": "node utils/vdp-crawler-playwright.js --test --verbose",
+    "crawl": "node utils/vdp-crawler-playwright.js",
+    "crawl-visible": "node utils/vdp-crawler-playwright.js --no-headless",
+    "setup": "npm install && npm run install-browsers"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "web-crawler",
+    "selenium",
+    "playwright",
+    "vdp",
+    "automotive",
+    "sitemap"
+  ],
+  "author": "WebCrawler Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

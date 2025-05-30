@@ -1,3 +1,5 @@
 
 # Ignore all files in the downloaded_pages directory
 downloaded_pages/
+node-portable/
+node_modules/
