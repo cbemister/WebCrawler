@@ -1,5 +1,7 @@
 # Get command line parameters
 param(
+    [Parameter(Mandatory=$false)]
+    [string]$dealerName,
     [switch]$test
 )
 
@@ -16,9 +18,34 @@ $searchContent = @(
     "306-445-3300"
 )
 
+# Define dealer domain mappings
+$dealerDomains = @{
+    "BRIDGES_GM" = "bridgesgm.com"
+    "ISLAND_GM" = "islandgm.com"
+    "MAPLERIDGE_GM" = "mapleridgegm.com"
+    "SMP_CHEV" = "smpchev.ca"
+    "MCNAUGHT_BUICK_GMC" = "mcnaughtbuickgmc.kinsta.cloud"
+    "MCNAUGHT_CADILLAC" = "mcnaughtcadillac.kinsta.cloud"
+    "PREMIER_CADILLAC" = "premiercadillac.kinsta.cloud"
+    "PREMIER_CHEVROLET_BUICK_GMC" = "premierchevroletbuickgmc.kinsta.cloud"
+    "MANN_NORTHWAY" = "mannnorthway.ca"
+    "MARY_NURSE" = "marynurse.com"
+}
+
 # Read URLs from the file
 if (Test-Path $inputPath) {
     $urls = Get-Content -Path $inputPath
+    
+    # Filter URLs for specific dealer if specified
+    if ($dealerName) {
+        $dealerDomain = $dealerDomains[$dealerName]
+        if (-not $dealerDomain) {
+            Write-Error "No domain mapping found for dealer: $dealerName"
+            exit 1
+        }
+        $urls = $urls | Where-Object { $_ -like "*$dealerDomain*" }
+        Write-Host "Filtered to $($urls.Count) URLs for dealer: $dealerName"
+    }
 } else {
     Write-Error "Input file not found at: $inputPath"
     exit 1
@@ -27,7 +54,7 @@ if (Test-Path $inputPath) {
 # If in test mode, only take first 5 URLs
 if ($test) {
     $urls = $urls | Select-Object -First 5
-    Write-Host "Running in test mode - checking only first 5 URLs"
+    Write-Host "Running in test mode - checking only first 5 URLs for $(if($dealerName){$dealerName}else{'all dealers'})" -ForegroundColor Yellow
 }
 
 # Create array to store results
